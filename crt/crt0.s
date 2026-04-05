@@ -1,5 +1,7 @@
 .section .text
 
+.extern __libc_start_main
+.extern main
 .global _start
 
 _start:
