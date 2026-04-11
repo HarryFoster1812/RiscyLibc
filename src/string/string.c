@@ -1,7 +1,9 @@
-#include "string.h"
+#include <cstdint>
+#include <string.h>
 
 
 char *strcpy(char *destination, const char *source) {
+	char* ret = destination;
 	while(*source) {
 		*destination = *source;
 		source++;
@@ -9,7 +11,7 @@ char *strcpy(char *destination, const char *source) {
 	}
 
 	*destination = *source;
-	return destination;
+	return ret;
 }
 
 char *strncpy(char *destination, const char *source, size_t len) {
@@ -48,11 +50,35 @@ size_t strlen(const char *str){
 	return len;
 }
 
-char *strchr(const char *str, int c);
-char *strrchr(const char *str, int c);
-char *strstr(const char *haystack, const char *needle);
-char *strrstr(const char *haystack, const char *needle);
-void *memcpy(void *destination, const void *source, size_t num);
-void *memmove(void *destination, const void *source, size_t num);
-int memcmp(const void *ptr1, const void *ptr2, size_t num);
-void *memset(void *source, int value, size_t num);
+char *strchr(const char *str, int c){}
+
+char *strrchr(const char *str, int c){}
+
+char *strstr(const char *haystack, const char *needle){}
+
+char *strrstr(const char *haystack, const char *needle){}
+
+void *memcpy(void *destination, const void *source, size_t num){
+	for(size_t i=0;i<num;++i){
+		*((uint8_t*)destination+i) = *((uint8_t*)source+i);
+	}
+	return destination;
+}
+
+void *memmove(void *destination, const void *source, size_t num){}
+
+int memcmp(const void *ptr1, const void *ptr2, size_t num){
+	for(size_t i=0;i<num;++i){
+		uint8_t a = *((uint8_t*)ptr1+i);
+		uint8_t b = *((uint8_t*)ptr2+i);
+		if (a < b)
+			return -1;
+		else if (a > b)
+			return 1;
+		
+	}
+	// they are equal
+	return 0;
+}
+
+void *memset(void *source, int value, size_t num){}

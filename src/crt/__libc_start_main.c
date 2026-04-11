@@ -3,12 +3,10 @@
 
 static void init(void)
 {
-	mem_list_init();
 }
 
 static void cleanup(void)
 {
-	mem_list_cleanup();
 }
 
 int __libc_start_main(int (*main_fn)(void))

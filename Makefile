@@ -17,7 +17,7 @@ CRT_OBJS := $(CRT_OBJS:.s=.o)
 C_OBJS = $(C_SRCS:.c=.o)
 
 # Output
-LIB = libmylib.a
+LIB = riscylibc.a
 
 # Default target
 all: $(LIB)
@@ -44,4 +44,4 @@ clean:
 # Compile a test program
 # Usage: make run TEST=test_program.c
 run: $(LIB)
-	$(RISCV_CC) $(RISCV_FLAGS) -nostdlib -static -L. -lmylib -lgcc -o $(basename $(TEST)) $(TEST)
+	$(RISCV_CC) $(RISCV_FLAGS) -nostdlib -static -L. -lriscylibc -lgcc -o $(basename $(TEST)) $(TEST)
