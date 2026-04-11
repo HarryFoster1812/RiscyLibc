@@ -25,4 +25,5 @@ int __libc_start_main(int (*main_fn)(void))
 
 void __exit(int status){
   __syscall1(SYS_exit, status);
+  while (1) { }
 }
