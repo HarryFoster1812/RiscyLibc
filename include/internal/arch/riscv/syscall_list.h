@@ -10,16 +10,11 @@
 #define __NR_lstat 6
 #define __NR_poll 7
 #define __NR_lseek 8
-
 #define __NR_brk 12
-
 #define __NR_pipe 22
-
 #define __NR_nanosleep 35
-
 #define __NR_getpid 39
 #define __NR_socket 41
-
 #define __NR_clone 56
 #define __NR_fork 57
 #define __NR_vfork 58
@@ -27,12 +22,9 @@
 #define __NR_exit 60
 #define __NR_wait4 61
 #define __NR_kill 62
-
 #define __NR_uname 63
-
 #define __NR_semget 64
 #define __NR_semop 65
-
 #define __NR_getcwd 79
 #define __NR_chdir 80
 #define __NR_fchdir 81
@@ -45,5 +37,43 @@
 #define __NR_chown 92
 #define __NR_fchown 93
 #define __NR_lchown 94
+
+
+#define SYS_read  __NR_read
+#define SYS_write  __NR_write
+#define SYS_open  __NR_open
+#define SYS_close  __NR_close
+#define SYS_stat  __NR_stat
+#define SYS_fstat  __NR_fstat
+#define SYS_lstat  __NR_lstat
+#define SYS_poll  __NR_poll
+#define SYS_lseek  __NR_lseek
+#define SYS_brk  __NR_brk
+#define SYS_pipe  __NR_pipe
+#define SYS_nanosleep  __NR_nanosleep
+#define SYS_getpid  __NR_getpid
+#define SYS_socket  __NR_socket
+#define SYS_clone  __NR_clone
+#define SYS_fork  __NR_fork
+#define SYS_vfork  __NR_vfork
+#define SYS_execve  __NR_execve
+#define SYS_exit  __NR_exit
+#define SYS_wait4  __NR_wait4
+#define SYS_kill  __NR_kill
+#define SYS_uname  __NR_uname
+#define SYS_semget  __NR_semget
+#define SYS_semop  __NR_semop
+#define SYS_getcwd  __NR_getcwd
+#define SYS_chdir  __NR_chdir
+#define SYS_fchdir  __NR_fchdir
+#define SYS_rename  __NR_rename
+#define SYS_mkdir  __NR_mkdir
+#define SYS_rmdir  __NR_rmdir
+#define SYS_creat  __NR_creat
+#define SYS_chmod  __NR_chmod
+#define SYS_fchmod  __NR_fchmod
+#define SYS_chown  __NR_chown
+#define SYS_fchown  __NR_fchown
+#define SYS_lchown  __NR_lchown
 
 #endif

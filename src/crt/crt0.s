@@ -10,5 +10,5 @@ _start:
 		la a0, main
     call __libc_start_main
 		
-		call __exit
+		tail __exit
 

@@ -1,3 +1,6 @@
+#include "internal/arch/riscv/syscall_arch.h"
+#include <internal/syscall.h>
+#include <internal/arch/riscv/syscall_list.h>
 #include <internal/types.h>
 #include <internal/mm/mem_list.h>
 
@@ -18,4 +21,8 @@ int __libc_start_main(int (*main_fn)(void))
 	cleanup();
 
 	return exit_code;
+}
+
+void __exit(int status){
+  __syscall1(SYS_exit, status);
 }
