@@ -7,8 +7,8 @@ extern "C" {
 
 #include <internal/types.h>
 
-ssize_t write(int fd, const void *buf, size_t len);
-ssize_t read(int fd, void *buf, size_t len);
+size_t write(int fd, const void *buf, size_t len);
+size_t read(int fd, void *buf, size_t len);
 
 #ifdef __cplusplus
 }

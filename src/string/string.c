@@ -1,3 +1,4 @@
+#include "internal/types.h"
 #include <string.h>
 
 
@@ -25,10 +26,30 @@ char *strncpy(char *destination, const char *source, size_t len) {
 	return destination;
 }
 
-char *strcat(char *destination, const char *source);
+char *strcat(char *destination, const char *source){return NULL;}
 char *strncat(char *destination, const char *source, size_t len);
 
 int strcmp(const char *str1, const char *str2){
+}
+
+char *strtok(char *str, const char *delim){
+  static char* p;
+  if (str) p=str;
+  if (!p) return NULL;
+
+  while (*p && strchr(delim, *p)) p++;
+  if (*p == '\0') return NULL;
+  char *start = p;
+
+  // find end
+  while (*p && !strchr(delim, *p)) p++;
+
+  if (*p) {
+    *p = '\0';
+    p++;
+  }
+
+  return start;
 }
 
 int strncmp(const char *str1, const char *str2, size_t len){
@@ -49,7 +70,13 @@ size_t strlen(const char *str){
 	return len;
 }
 
-char *strchr(const char *str, int c){}
+char *strchr(const char *str, int c){
+  while(*str){
+    if (*str == c) return str;
+    str++;
+  } 
+  return NULL;
+}
 
 char *strrchr(const char *str, int c){}
 

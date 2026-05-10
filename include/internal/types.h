@@ -1,7 +1,7 @@
 #ifndef __TYPES_H__
 #define __TYPES_H__	1
 
-typedef unsigned long size_t;
+typedef unsigned int size_t;
 typedef long ssize_t;
 typedef long off_t;
 typedef long long quad_t;

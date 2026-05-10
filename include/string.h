@@ -20,6 +20,8 @@ size_t strlen(const char *str);
 int strcmp(const char *str1, const char *str2);
 int strncmp(const char *str1, const char *str2, size_t len);
 
+char *strtok(char *str, const char *delim);
+
 char *strchr(const char *str, int c);
 char *strrchr(const char *str, int c);
 

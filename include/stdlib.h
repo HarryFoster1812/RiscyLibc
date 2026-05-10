@@ -17,7 +17,8 @@ void free(void *ptr);
 void *calloc(size_t numobj, size_t size);
 void *realloc(void *ptr, size_t size);
 void *reallocarray(void *ptr, size_t numobj, size_t size);
-long exit(long exit_code);
+int exit(int exit_code);
+
 
 #ifdef __cplusplus
 }
