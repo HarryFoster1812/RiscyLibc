@@ -7,6 +7,7 @@
 extern "C" {
 #endif
 
+#include <internal/syscall.h>
 #include <internal/types.h>
 
 #define EXIT_SUCCESS	0
@@ -17,7 +18,9 @@ void free(void *ptr);
 void *calloc(size_t numobj, size_t size);
 void *realloc(void *ptr, size_t size);
 void *reallocarray(void *ptr, size_t numobj, size_t size);
-int exit(int exit_code);
+int exit(int exit_code){
+	syscall(SYS_exit, exit_code);
+}
 
 
 #ifdef __cplusplus
