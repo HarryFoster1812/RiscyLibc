@@ -1,6 +1,7 @@
 #pragma once
 
 #include "internal/arch/riscv/syscall_list.h"
+#include "internal/types.h"
 #include <internal/syscall.h>
 
 
@@ -14,4 +15,6 @@ int execv(char const * filename, char * const argv[])
 	return execve(filename, argv);
 }
 
-
+pid_t fork(){
+	return syscall(SYS_fork);
+}
