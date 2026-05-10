@@ -46,6 +46,11 @@ static void print_int(int x)
         putchar(buf[i]);
 }
 
+
+int putchar(int ch){
+	return write(stdout, &ch, 1);
+}
+
 int printf(const char *fmt, ...)
 {
     __builtin_va_list ap;
