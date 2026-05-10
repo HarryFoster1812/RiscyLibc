@@ -6,6 +6,8 @@ typedef long ssize_t;
 typedef long off_t;
 typedef long long quad_t;
 
+typedef unsigned char pid_t;
+
 typedef unsigned int mode_t;		/* Type of file attribute bitmasks.  */
 typedef unsigned int ino_t;		/* Type of file serial numbers.  */
 typedef quad_t ino64_t;			/* Type of file serial numbers (LFS).  */
